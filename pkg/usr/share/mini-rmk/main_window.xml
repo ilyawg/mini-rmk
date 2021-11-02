@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window border_width="10">
+  <box type="vertical" homogeneous="false">
+    <!-- Строка статуса -->
+    <box type="horizontal" spacing="5" expand="false" fill="false" padding="5">
+      <frame title="ККМ Зав. №">
+        <text label="kkm_text" font_size="15"/>
+      </frame>
+      <frame title="Документ">
+        <text label="doc_text" font_size="15"/>
+      </frame>
+      <frame title="Смена">
+        <text label="session_text" font_size="15"/>
+      </frame>
+    </box>
+    <!-- Строка сообщений -->
+    <text label="main_text" size="60" font_size="50" xalign="left" expand="false" fill="false">
+      <scale length="20" font_size="30"/>
+      <scale length="30" font_size="25"/>
+      <scale length="39" font_size="20"/>
+    </text>
+    <!-- Строка данных о позиции -->
+    <box type="horizontal" spacing="5" expand="false" fill="false" padding="5">
+      <frame title="Код">
+        <text label="code_text" font_size="25"/>
+      </frame>
+      <frame title="Количество">
+        <text label="quantity_text" font_size="25"/>
+      </frame>
+      <frame title="Цена">
+        <text label="price_text" font_size="25"/>
+      </frame>
+      <frame title="Стоимость">
+        <text label="summ_text" font_size="25"/>
+      </frame>
+    </box>
+    <!-- Таблица чека -->
+    <box type="horizontal" homogeneous="false">
+	<receipt_table font_size="15"/>
+        <!-- Кнопки -->
+	<box label="buttons" type="vertical" expand="false" spacing="5">
+	    <button label="service_button">
+	      <box type="vertical" homogeneous="false">
+	        <picture file="money_calculator.png"/>
+	        <text value="Касса"/>
+	      </box>
+	    </button>
+	    <button label="ware_button">
+	      <box type="vertical" homogeneous="false">
+	        <picture file="shopping-basket-add.png"/>
+	        <text value="Товар"/>
+	      </box>
+	    </button>
+	    <button label="storno_button">
+	      <box type="vertical" homogeneous="false">
+	        <picture file="shopping-basket-remove.png"/>
+	        <text value="Сторно"/>
+	      </box>
+	    </button>
+	    <button label="receipt_button">
+	      <box type="vertical" homogeneous="false">
+	        <picture file="taxes.png"/>
+	        <text value="Итог"/>
+	      </box>
+	    </button>
+	</box>
+    </box>
+    <!-- Область итога -->
+    <box type="horizontal" homogeneous="false" expand="false" fill="false">
+      <!-- Область уведмлений -->
+      <picture label="agent_picture" error="error.png" warning="warning.png" refresh="refresh.png" expand="false" fill="false" padding="5" show="false"/>
+      <picture label="kkm_picture" file="cashbox.png" expand="false" fill="false" show="false"/>
+      <picture label="lockdb_picture" file="lockdb.png" expand="false" fill="false" show="false"/>
+      <picture label="stop_picture" file="stop.png" expand="false" fill="false" show="false"/>
+      <picture_button label="access_picture" file="Register-icon.png" expand="false" fill="false" show="false"/>
+      <picture label="action_picture" file="gear1ani.gif" expand="false" fill="false" show="false"/>
+      <box type="vertical" homogeneous="false">
+	<!-- Строка итога -->
+        <box type="horizontal" homogeneous="false" expand="false" fill="false">
+          <text xalign="right" font_size="30" value="Итого:"/>
+          <text label="total_text" font_size="30" expand="false" fill="false" padding="50" value="0.00"/>
+        </box>
+        <!-- Часы -->
+        <text label="clock_text" xalign="right" font="Monospace Bold 10"/>
+      </box>
+    </box>
+  </box>
+</window>

@@ -1,0 +1,16 @@
+main.o: main.c conf.h serverdb.h localdb.h database_common.h vararg.h \
+  global.h log.h
+database_common.o: database_common.c database_common.h vararg.h conf.h \
+  global.h
+localdb.o: localdb.c conf.h localdb.h database_common.h vararg.h log.h
+localdb_sqlite.o: localdb_sqlite.c vararg.h conf.h localdb.h \
+  database_common.h serverdb.h sqlite_common.h log.h global.h
+sqlite_common.o: sqlite_common.c vararg.h database_common.h \
+  sqlite_common.h log.h global.h
+serverdb.o: serverdb.c serverdb.h localdb.h database_common.h vararg.h
+serverdb_mssql.o: serverdb_mssql.c conf.h localdb.h database_common.h \
+  vararg.h serverdb.h log.h global.h
+process.o: process.c global.h localdb.h database_common.h vararg.h \
+  serverdb.h log.h
+conf.o: conf.c conf.h
+log.o: log.c log.h conf.h global.h

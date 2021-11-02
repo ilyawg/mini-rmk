@@ -1,0 +1,26 @@
+main.o: main.c global.h conf.h kkm.h numeric.h process.h
+protocol.o: protocol.c global.h protocol.h conf.h
+commands.o: commands.c protocol.h commands.h numeric.h vararg.h
+kkm.o: kkm.c vararg.h conf.h commands.h protocol.h numeric.h registers.h \
+ main_window.h receipt.h kkm.h localdb.h recordset.h database_common.h \
+ global.h
+process.o: process.c conf.h global.h process.h actions.h kkm.h numeric.h \
+ protocol.h commands.h vararg.h registers.h receipt.h main_window.h \
+ localdb.h recordset.h database_common.h
+actions.o: actions.c conf.h global.h actions.h process.h kkm.h numeric.h \
+ receipt.h localdb.h recordset.h database_common.h vararg.h main_window.h
+conf.o: conf.c conf.h
+main_window.o: main_window.c global.h conf.h receipt.h numeric.h \
+ main_window.h kkm.h parser.h vararg.h
+receipt.o: receipt.c receipt.h numeric.h kkm.h main_window.h localdb.h \
+ conf.h recordset.h database_common.h vararg.h global.h
+numeric.o: numeric.c numeric.h
+sqlite_common.o: sqlite_common.c vararg.h database_common.h \
+ sqlite_common.h log.h global.h
+database_common.o: database_common.c database_common.h vararg.h conf.h \
+ global.h
+localdb_sqlite.o: localdb_sqlite.c vararg.h conf.h database_common.h \
+ sqlite_common.h localdb.h recordset.h numeric.h
+recordset.o: recordset.c recordset.h
+log.o: log.c log.h global.h
+parser.o: parser.c parser.h

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window title="Товар" size="420x320" border_width="15" modal="true" hide_cursor="true">
+  <box type="vertical" homogeneous="false" spacing="10">
+    <box type="horizontal" homogeneous="false" expand="false" spacing="5">
+      <input label="input_string" font_size="25"/>
+      <button label="delete" expand="false" picture="back-24.png" width="45"/>
+      <button label="clear" expand="false" picture="erase-24.png" width="45"/>
+    </box>
+    <box type="horizontal" homogeneous="false" expand="false">
+        <text value="Количество:" font_size="15" expand="false" fill="false"/>
+        <text label="quantity_text" value="1.000" font_size="15" />
+    </box>
+    <box type="horizontal" homogeneous="false">
+      <box type="vertical" spacing="10" width="165" expand="false" padding="15">
+        <box type="horizontal" spacing="10">
+          <button label="num_7"><text value='7' font_size="15"/></button>
+          <button label="num_8"><text value='8' font_size="15"/></button>
+          <button label="num_9"><text value='9' font_size="15"/></button>
+        </box>
+        <box type="horizontal" spacing="10">
+          <button label="num_4"><text value='4' font_size="15"/></button>
+          <button label="num_5"><text value='5' font_size="15"/></button>
+          <button label="num_6"><text value='6' font_size="15"/></button>
+        </box>
+        <box type="horizontal" spacing="10">
+          <button label="num_1"><text value='1' font_size="15"/></button>
+          <button label="num_2"><text value='2' font_size="15"/></button>
+          <button label="num_3"><text value='3' font_size="15"/></button>
+        </box>
+        <box type="horizontal" spacing="10">
+          <button label="num_0"><text value='0' font_size="15"/></button>
+          <button label="num_dot"><text value='.' font_size="15"/></button>
+          <button label="quantity_button"><text value='*' font_size="15"/></button>
+        </box>
+      </box>
+      <box type="vertical" padding="15">
+        <button label="code_button" padding="10">
+          <box type="horizontal" homogeneous="false" spacing="5">
+	    <picture file="article.png" expand="false"/>
+	    <text value='Код' font_size="12" font_weight="bold"/>
+	  </box>
+	</button>
+        <button label="barcode_button" padding="10">
+          <box type="horizontal" homogeneous="false" spacing="5">
+	    <picture file="barcode.png" expand="false"/>
+	    <text value='Штрихкод' font_size="12" font_weight="bold"/>
+	  </box>
+	</button>
+        <button label="close" padding="10">
+          <box type="horizontal" homogeneous="false" spacing="5">
+	    <picture file="undo.png" expand="false"/>
+	    <text value='Закрыть' font_size="12" font_weight="bold"/>
+	  </box>
+	</button>
+      </box>
+    </box>    
+  </box>
+</window>

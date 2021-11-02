@@ -1,0 +1,37 @@
+main.o: main.c global.h ../numeric.h conf.h kkm.h protocol.h process.h \
+ scanner.h
+protocol.o: protocol.c global.h ../numeric.h protocol.h conf.h
+commands.o: commands.c conf.h protocol.h commands.h ../vararg.h \
+ ../numeric.h
+kkm.o: kkm.c ../vararg.h conf.h commands.h ../numeric.h main_window.h \
+ receipt.h kkm.h protocol.h localdb.h ../recordset.h ../database_common.h \
+ ../vararg.h global.h
+process.o: process.c conf.h global.h ../numeric.h process.h actions.h \
+ receipt.h kkm.h protocol.h commands.h ../vararg.h main_window.h \
+ receipt_window.h cash_window.h localdb.h ../recordset.h \
+ ../database_common.h ../vararg.h
+actions.o: actions.c conf.h global.h ../numeric.h actions.h receipt.h \
+ process.h kkm.h protocol.h localdb.h ../recordset.h ../database_common.h \
+ ../vararg.h main_window.h
+conf.o: conf.c conf.h
+main_window.o: main_window.c global.h ../numeric.h conf.h receipt.h \
+ main_window.h kkm.h protocol.h ../parser.h window.h ../vararg.h \
+ service_window.h ware_window.h process.h scanner.h
+receipt.o: receipt.c global.h ../numeric.h receipt.h kkm.h protocol.h \
+ main_window.h localdb.h conf.h ../recordset.h ../database_common.h \
+ ../vararg.h
+localdb_sqlite.o: localdb_sqlite.c ../vararg.h conf.h \
+ ../database_common.h ../vararg.h ../sqlite_common.h ../database_common.h \
+ localdb.h ../recordset.h ../numeric.h
+global.o: global.c global.h ../numeric.h
+window.o: window.c global.h ../numeric.h window.h ../parser.h
+cash_window.o: cash_window.c global.h ../numeric.h ../parser.h window.h \
+ main_window.h receipt.h cash_window.h process.h
+service_window.o: service_window.c global.h ../numeric.h ../parser.h \
+ window.h main_window.h receipt.h cash_window.h service_window.h \
+ process.h
+ware_window.o: ware_window.c global.h ../numeric.h ../parser.h window.h \
+ main_window.h receipt.h service_window.h process.h
+receipt_window.o: receipt_window.c global.h ../numeric.h ../parser.h \
+ window.h main_window.h receipt.h process.h
+scanner.o: scanner.c global.h ../numeric.h scanner.h conf.h process.h

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window title="Касса" border_width="25" modal="true" hide_cursor="true">
+  <box type="vertical" spacing="10">
+    <button label="cash">
+      <box type="horizontal" homogeneous="false" spacing="5">
+        <picture file="safety_box.png" expand="false"/>
+	<text value="Ящик" font_size="12" font_weight="bold"/>
+      </box>
+    </button>
+    <button label="return">
+      <box type="horizontal" homogeneous="false" spacing="5">
+        <picture file="undo_green.png"  expand="false"/>
+	<text value="Возврат" font_size="12" font_weight="bold"/>
+      </box>
+    </button>
+    <button label="xreport">
+      <box type="horizontal" homogeneous="false" spacing="5">
+        <picture file="script_x.png"  expand="false"/>
+	<text value="Отчет без гашения" font_size="12" font_weight="bold"/>
+      </box>
+    </button>
+    <button label="zreport">
+      <box type="horizontal" homogeneous="false" spacing="5">
+        <picture file="script_z.png"  expand="false"/>
+	<text value="Отчет с гашением" font_size="12" font_weight="bold"/>
+      </box>
+    </button>
+    <button label="close">
+      <box type="horizontal" homogeneous="false" spacing="5">
+        <picture file="undo.png"  expand="false"/>
+	<text value="Закрыть" font_size="12" font_weight="bold"/>
+      </box>
+    </button>
+  </box>
+</window>

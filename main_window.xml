@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<main_window>
+  <box type="vertical" homogeneous="false">
+    <!-- Строка статуса -->
+    <box type="horizontal" spacing="5" expand="false" fill="false" padding="5">
+      <frame title="ККМ Зав. №">
+        <text label="kkm_num" font_size="15"/>
+      </frame>
+      <frame title="Документ">
+        <text label="doc_state" font_size="15"/>
+      </frame>
+      <frame title="Смена">
+        <text label="session_state" font_size="15"/>
+      </frame>
+    </box>
+    <!-- Строка сообщений -->
+    <text label="main_string" size="75" font_size="50" expand="false" fill="false">
+      <scale length="24" font_size="40"/>
+      <scale length="31" font_size="30"/>
+      <scale length="37" font_size="25"/>
+      <scale length="41" font_size="20"/>
+    </text>
+    <!-- Строка данных о позиции -->
+    <box type="horizontal" spacing="5" expand="false" fill="false" padding="5">
+      <frame title="Код">
+        <text label="code" font_size="30"/>
+      </frame>
+      <frame title="Количество">
+        <text label="quantity" font_size="30"/>
+      </frame>
+      <frame title="Цена">
+        <text label="price" font_size="30"/>
+      </frame>
+      <frame title="Стоимость">
+        <text label="summ" font_size="30"/>
+      </frame>
+    </box>
+    <!-- Таблица чека -->
+    <receipt_table font_size="15"/>
+    <!-- Область итога -->
+    <box type="horizontal" homogeneous="false" expand="false" fill="false">
+      <!-- Область уведмлений -->
+      <agent_picture error="error.png" warning="warning.png" refresh="refresh.png" expand="false" fill="false" padding="5"/>
+      <picture label="kkm" file="cashbox.png" expand="false" fill="false"/>
+      <picture label="access" file="Register-icon.png" expand="false" fill="false"/>
+      <picture label="action" file="gear1ani.gif" expand="false" fill="false"/>
+      <picture label="stop" file="stop.png" expand="false" fill="false"/>
+      <box type="vertical" homogeneous="false">
+	<!-- Строка итога -->
+        <box type="horizontal" homogeneous="false" expand="false" fill="false">
+          <text xalign="right" font_size="30">Итого:</text>
+          <text label="total" font_size="30" expand="false" fill="false" padding="50">0.00</text>
+        </box>
+        <!-- Часы -->
+        <text label="clock" xalign="right" font="Fixed 15"/>
+      </box>
+    </box>
+  </box>
+</main_window>
